@@ -23,7 +23,7 @@ The Agile Prompt Builder is a simple and easy-to-use tool that helps you create 
 
 1.  Clone the repository or download the source code as a ZIP file.
 
-`git clone https://github.com/ailviotorre/Agile-Prompt-Builder.git` 
+`git clone https://github.com/your_username/Agile-Prompt-Builder.git` 
 
 2.  Navigate to the project folder and open the `index.html` file in your preferred web browser.
 
@@ -36,6 +36,54 @@ The Agile Prompt Builder is a simple and easy-to-use tool that helps you create 
 -   `index.html`: The main HTML file that contains the structure of the web page.
 -   `styles.css`: The external CSS file that contains the styling for the web page.
 -   `script.js`: The external JavaScript file that handles the form submission and generates the prompt.
+
+## How Work
+This code is creating a form in a web page and adding an event listener to the form submission. When the form is submitted, the event listener function is called.
+
+The function first prevents the default form submission behavior by calling `event.preventDefault()`. It then retrieves the values of several form elements using the `form.elements` object and stores them in variables.
+
+Next, the function constructs a prompt message by concatenating the values of the form elements together using string interpolation. If the "add code" checkbox is checked, the message will also include a code snippet.
+
+Finally, the function creates a new paragraph element and sets its text content to the prompt message. The paragraph element is then appended to the end of the document body.
+
+Here's a UML diagram to illustrate the class structure of this code:
+
+         +--------------------------+
+         |      EventTarget         |
+         +--------------------------+
+         | addEventListener()       |
+         | removeEventListener()    |
+         +--------------------------+
+                        |
+                        |
+                        v
+         +--------------------------+
+         |          Element         |
+         +--------------------------+
+         | querySelector()          |
+         | addEventListener()       |
+         +--------------------------+
+                        |
+                        |
+                        v
+         +--------------------------+
+         |     HTMLFormElement      |
+         +--------------------------+
+         | elements                 |
+         +--------------------------+
+                        |
+                        |
+                        v
+         +--------------------------+
+         |         Function         |
+         +--------------------------+
+         | event.preventDefault()   |
+         | form.elements[]          |
+         | string interpolation     |
+         | createElement()          |
+         | textContent              |
+         | appendChild()            |
+         +--------------------------+
 
 ## Contributing
 
