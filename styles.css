@@ -1,0 +1,18 @@
+/* General form styles */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+  }
+  
+  /* Labels */
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  /* Input fields */
+  input {
+    margin-bottom: 10px;
+  }
+  
