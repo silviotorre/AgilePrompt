@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Agile Prompt Builder</title>
+    <meta name="description" content="Maybe the simplest tool to help you build agile prompts.">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      form {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      input {
+        margin-bottom: 10px;
+      }
+    </style>
+
+  </head>
+  <body>
+    <form>
+      <label for="active-user">Active User:</label>
+      <input type="text" id="active-user" name="active-user"><br>
+      <label for="action">Action:</label>
+      <input type="text" id="action" name="action"><br>
+      <label for="auspicious-result">Auspicious Result:</label>
+      <input type="text" id="auspicious-result" name="auspicious-result"><br>
+      <label for="conditions">Conditions:</label>
+      <input type="text" id="conditions" name="conditions"><br>
+      <label for="add-code">Add Code:</label>
+      <input type="checkbox" id="add-code" name="add-code" value="true"><br>
+      <input type="submit" value="Generate Prompt">
+    </form>
+
+    <script>
+      const form = document.querySelector('form');
+
+      form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const activeUser = form.elements['active-user'].value;
+        const action = form.elements['action'].value;
+        const auspiciousResult = form.elements['auspicious-result'].value;
+        const conditions = form.elements['conditions'].value;
+        const addCode = form.elements['add-code'].checked;
+
+        let prompt = `Act as ${activeUser} and do these ${action} to obtain this ${auspiciousResult}. The acceptance conditions are ${conditions}.`;
+
+        if (addCode) {
+          prompt += " Add this code snippet: // your code here";
+        }
+
+        const promptOutput = document.createElement('p');
+        promptOutput.textContent = prompt;
+
+        document.body.appendChild(promptOutput);
+      });
+    </script>
+  </body>
+</html>
