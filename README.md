@@ -23,7 +23,7 @@ The Agile Prompt Builder is a simple and easy-to-use tool that helps you create 
 
 1.  Clone the repository or download the source code as a ZIP file.
 
-`git clone https://github.com/your_username/Agile-Prompt-Builder.git` 
+`git clone https://github.com/silviotorre/Agile-Prompt-Builder.git` 
 
 2.  Navigate to the project folder and open the `index.html` file in your preferred web browser.
 
@@ -46,7 +46,9 @@ Next, the function constructs a prompt message by concatenating the values of th
 
 Finally, the function creates a new paragraph element and sets its text content to the prompt message. The paragraph element is then appended to the end of the document body.
 
-Here's a UML diagram to illustrate the class structure of this code:
+### UML Diagram
+
+Here's a UML diagram to illustrate the structure of this code:
 
          +--------------------------+
          |      EventTarget         |
